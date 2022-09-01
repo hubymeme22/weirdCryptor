@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">WeirdCryptor</string>
+    <string name="encrypt_button">Encrypt</string>
+    <string name="decrypt_button">Decrypt</string>
+</resources>

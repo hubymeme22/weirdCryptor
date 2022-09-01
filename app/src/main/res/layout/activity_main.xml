@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/calculator_background"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/inputText"
+        android:layout_width="260dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/output_text"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Encrypted Message"
+        android:inputType="textMultiLine"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/outputText"
+        android:layout_width="260dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/output_text"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Encrypted Message"
+        android:inputType="textMultiLine"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/key"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/key"
+        android:layout_width="263dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/calculator_num_input"
+        android:hint="Key"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_hint"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputText" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/encrypt_button"
+        android:layout_width="110dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_theme1"
+        android:text="@string/encrypt_button"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/outputText"
+        app:layout_constraintTop_toBottomOf="@+id/outputText" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/decrypt_button"
+        android:layout_width="110dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_theme1"
+        android:text="@string/decrypt_button"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/outputText"
+        app:layout_constraintTop_toBottomOf="@+id/outputText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
